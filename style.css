@@ -21,3 +21,14 @@ footer{border-top:1px solid var(--line);padding:30px 8vw;display:flex;justify-co
 @keyframes scan{0%{top:12%;opacity:0}20%{opacity:.6}80%{opacity:.6}100%{top:88%;opacity:0}}
 @media(max-width:850px){.nav{position:absolute;top:78px;left:0;right:0;background:#07090c;display:none;flex-direction:column;align-items:stretch;padding:20px 8vw;border-bottom:1px solid var(--line)}.nav.open{display:flex}.nav a{padding:10px 0}.menu-toggle{display:block}.hero{grid-template-columns:1fr;padding-top:130px}.hero-visual{display:none}.service-grid{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.work-grid{grid-template-columns:1fr}.contact-box{flex-direction:column;align-items:flex-start}footer{flex-direction:column;gap:15px}}
 @media(max-width:520px){.service-grid{grid-template-columns:1fr}.hero h1{letter-spacing:-4px}.section{padding:85px 6vw}.site-header{padding:0 6vw}.hero{padding-left:6vw;padding-right:6vw}.email{font-size:25px}}
+
+/* Founder section */
+.founder{display:grid;grid-template-columns:minmax(280px,0.9fr) minmax(320px,1.1fr);gap:clamp(35px,7vw,100px);align-items:center;border-top:1px solid rgba(255,255,255,.08)}
+.founder-photo{position:relative;max-width:520px;justify-self:center;width:100%;overflow:hidden;border:1px solid rgba(0,220,255,.35);background:#050608}
+.founder-photo:before{content:"";position:absolute;inset:14px;border:1px solid rgba(0,220,255,.22);pointer-events:none;z-index:2}
+.founder-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;filter:saturate(.9) contrast(1.04);}
+.founder-copy h3{font-size:.82rem;letter-spacing:.18em;color:#00d8ff;margin:0 0 25px}
+.founder-copy p{max-width:680px;color:#b7bec7;line-height:1.8;font-size:1rem}
+.founder-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}
+.founder-tags span{font-size:.65rem;letter-spacing:.14em;border:1px solid rgba(0,216,255,.3);padding:9px 12px;color:#e9fbff}
+@media(max-width:800px){.founder{grid-template-columns:1fr}.founder-photo{max-width:440px}.founder-copy h2{font-size:clamp(42px,12vw,80px)}}
