@@ -6,7 +6,7 @@
 <meta name="description" content="ALAM VFX STUDIO — VFX vendor work, CG, animation, motion graphics, editing and AI-assisted visual development.">
 <meta name="theme-color" content="#05070a">
 <title>ALAM VFX STUDIO — VFX Vendor Work</title>
-<link rel="icon" href="alam%20vfx%20logo.png">
+<link rel="icon" href="assets/alam-logo-clean.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 <div class="grain"></div>
 
 <header class="site-header">
-  <a href="#home" class="brand"><img src="alam%20vfx%20logo.png" alt="ALAM VFX STUDIO"></a>
+  <a href="#home" class="brand"><img src="assets/alam-logo-clean.png" alt="ALAM VFX STUDIO"></a>
   <nav class="nav">
     <a class="active" href="#home">HOME</a>
     <a href="#about">ABOUT</a>
@@ -36,7 +36,7 @@
 
   <div class="hero-copy reveal">
     <div class="eyebrow"><span></span> CREATIVE PRODUCTION SERVICES</div>
-    <img class="hero-logo" src="alam%20vfx%20logo.png" alt="ALAM VFX STUDIO">
+    <img class="hero-logo" src="assets/alam-logo-clean.png" alt="ALAM VFX STUDIO">
     <div class="hero-title">VFX <span>WORK</span></div>
     <p class="hero-text">ALAM VFX STUDIO is a creative production studio delivering VFX, CG, animation, editing and AI-assisted visual development for film, advertising, OTT and digital content.</p>
     <div class="hero-actions">
@@ -187,7 +187,8 @@
 
 <section id="contact" class="contact">
   <div class="contact-inner">
-    <div>
+    <div class="contact-copy">
+      <img class="contact-logo" src="assets/alam-logo-clean.png" alt="ALAM VFX STUDIO">
       <div class="section-no">07 / CONTACT</div>
       <h2>Have a shot<br><span>in mind?</span></h2>
       <p>Tell us what you are building. We can discuss scope, timeline and delivery.</p>
@@ -198,12 +199,15 @@
       </div>
     </div>
     <form id="briefForm">
-      <input name="name" placeholder="Your name" required>
-      <input name="email" type="email" placeholder="Email" required>
-      <input name="company" placeholder="Company / project">
-      <select name="service"><option>VFX</option><option>CG / 3D</option><option>Animation</option><option>Editing</option><option>Motion Graphics</option><option>Color Grading</option><option>AI Visuals</option></select>
-      <textarea name="brief" placeholder="Tell us about the project" required></textarea>
+      <input name="name" placeholder="YOUR NAME" required>
+      <input name="email" type="email" placeholder="EMAIL" required>
+      <input name="company" placeholder="COMPANY / PROJECT">
+      <select name="service" aria-label="Service">
+        <option>VFX</option><option>CG / 3D</option><option>Animation</option><option>Editing</option><option>Motion Graphics</option><option>Color Grading</option><option>AI Visuals</option><option>Other</option>
+      </select>
+      <textarea name="brief" placeholder="PROJECT DETAILS" required></textarea>
       <button class="btn primary" type="submit">SEND PROJECT BRIEF →</button>
+      <div class="contact-availability">AVAILABLE FOR VFX, CG AND CREATIVE PRODUCTION WORK WORLDWIDE.</div>
     </form>
   </div>
 </section>
