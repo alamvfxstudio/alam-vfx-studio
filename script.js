@@ -3,7 +3,7 @@ const projects = [
   {title:"Indian 2",year:"2024",type:"film",label:"FILM",client:"Identical Brains Studio",poster:"posters/indian-2.jpg"},
   {title:"Crakk: Jeetegaa Toh Jiyegaa",year:"2024",type:"film",label:"FILM",client:"Identical Brains Studio",poster:"posters/crakk.jpg"},
   {title:"Article 370",year:"2024",type:"film",label:"FILM",client:"Identical Brains Studio",poster:"posters/article-370.jpg"},
-  {title:"Aadipurush",year:"2023",type:"film",label:"FILM",client:"Retrophiles Studio",poster:"posters/aadipurush.jpg"},
+  {title:"Adipurush",year:"2023",type:"film",label:"FILM",client:"Retrophiles Studio",poster:"posters/aadipurush.jpg"},
   {title:"Bawaal",year:"2023",type:"film",label:"FILM",client:"Identical Brains Studio",poster:"posters/bawaal.jpg"},
   {title:"Kantara: A Legend — Chapter 1",year:"2025",type:"film",label:"FILM",client:"Identical Brains Studio",poster:"posters/kantara-chapter-1.jpg"},
   {title:"Udta Teer",year:"2025",type:"film",label:"FILM",client:"Identical Brains Studio",poster:"posters/udta-teer.jpg"},
@@ -32,6 +32,8 @@ const projects = [
   {title:"Cocktail 2",year:"2025",type:"film",label:"FILM",client:"Studio / Client credit",poster:"posters/cocktail-2.jpg"}
 ];
 
+projects.forEach((project,index)=>{project.projectNo=String(index+1).padStart(2,"0")});
+
 const grid=document.getElementById("workGrid");
 const modal=document.getElementById("projectModal");
 
@@ -41,7 +43,7 @@ function renderProjects(filter="all"){
     const card=document.createElement("article");
     card.className="work-card reveal";
     card.innerHTML=`<div class="poster"><img src="${p.poster}" alt="${p.title} poster" loading="lazy"></div>
-      <div class="work-overlay"><span class="work-year">${p.year} / ${p.label}</span><h3>${p.title}</h3>
+      <div class="work-overlay"><span class="work-year">PROJECT ${p.projectNo} / ${p.year} / ${p.label}</span><h3>${p.title}</h3>
       <p>VFX VENDOR WORK</p><div class="client">${p.client}</div><span class="work-arrow">↗</span></div>`;
     card.addEventListener("click",()=>openProject(p));
     grid.appendChild(card);
@@ -52,7 +54,7 @@ function openProject(p){
   modal.classList.add("open");modal.setAttribute("aria-hidden","false");
   document.getElementById("modalImage").src=p.poster;
   document.getElementById("modalTitle").textContent=p.title;
-  document.getElementById("modalMeta").textContent=`${p.year} / ${p.label} / VFX VENDOR WORK`;
+  document.getElementById("modalMeta").textContent=`PROJECT ${p.projectNo} / ${p.year} / ${p.label} / VFX VENDOR WORK`;
   document.getElementById("modalDescription").textContent="Selected VFX vendor portfolio project. ALAM VFX STUDIO provides production support across VFX, CG, environments, animation and post-production.";
   document.getElementById("modalClient").textContent=`Studio / Client — ${p.client}`;
 }
